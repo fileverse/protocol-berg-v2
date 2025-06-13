@@ -109,7 +109,8 @@ async function main() {
       },
     ],
     onLogs: async (logs) => {
-        const response = await fetch(`https://${process.env.PINATA_GATEWAY}/ipfs/${logs[0].args.contentIpfsHash.replace("ipfs://", "")}`).then(res => res.text());
+        console.log(logs);
+        const response = await fetch(`https://${process.env.PINATA_GATEWAY}/ipfs/${logs[0].args.contentIPFSHash.replace("ipfs://", "")}`).then(res => res.text());
         console.log(`Listened Response: ${response}`);
         const conversation = await responseToPrompt(llms[0], `Summarise this in 5 sentences: ${response}`);
         console.log(`Summarised Response: ${conversation}`);

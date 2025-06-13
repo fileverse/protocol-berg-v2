@@ -59,17 +59,17 @@ async function responseToPrompt(llm, prompt) {
 async function main() {
   const agentStorage = await setupStorage();
   const llms = await setupLLMs(1);
-  const prompt = "How to make tomatoe soup?";
+  const prompt = "How to do a workshop structure?";
   
-  console.log("Prompt:", prompt);
-  const conversation = await responseToPrompt(llms[0], prompt);
+//   console.log("Prompt:", prompt);
+//   const conversation = await responseToPrompt(llms[0], prompt);
   
-  // Print the conversation
-  const conversationLog = [];
-  conversationLog.push("\nConversation Log:\n");
-  conversationLog.push(conversation);
-  conversationLog.push("\n");
-  const file = await agentStorage.create(conversationLog.join("\n"));
+//   // Print the conversation
+//   const conversationLog = [];
+//   conversationLog.push("\nConversation Log:\n");
+//   conversationLog.push(conversation);
+//   conversationLog.push("\n");
+  const file = await agentStorage.create(prompt);
   console.log(`File created: ${file}`);
 }
 
