@@ -1,0 +1,21 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "storage": "node storage.js",
+    "conversation": "node conversation.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fileverse/agents": "^2.0.1",
+    "dotenv": "^16.5.0",
+    "ollama": "^0.5.16",
+    "viem": "^2.30.1"
+  }
+}
